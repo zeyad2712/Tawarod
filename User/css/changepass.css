@@ -1,0 +1,152 @@
+* {
+    margin: 0;
+    padding: 0;
+
+    box-sizing: border-box;
+
+    caret-color: white;
+
+}
+
+:root {
+    --color1: #f8f7e5;
+    --color2: #c18d52;
+    --color3: #081b1b;
+    --color4: #203b37;
+    --color5: #5a8f76;
+    --color6: #96cdb0;
+}
+
+body {
+    background-color: var(--color1);
+    font-family: "Rubik", sans-serif;
+}
+
+
+.home-section {
+
+    width: 100%;
+ 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main-form {
+
+    width: 45%;
+
+}
+
+.sub-form h1{
+    align-self: center; 
+    color:var(--color1);
+}
+form input{
+    color: white;
+}
+
+.sub-form {
+    background: var(--color4);
+    border-radius: 8px;
+    padding: 40px 10px 20px;
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.sub-form form .pass {
+    padding: 10px 12px;
+    width: 100%;
+    padding-left: 10px;
+    margin-bottom: 20px;
+    margin-top: 10px;
+    border: none;
+    border-bottom: 2px solid white;
+
+
+
+    background-color: transparent;
+
+    outline: none;
+}
+
+.sub-form form .pass::placeholder {
+
+    /* color: rgb(74, 56, 56); */
+    color: var(--color1);
+}
+
+.main-label {
+    font-size: 15px;
+}
+
+.sub-form h1 {
+    margin-bottom: 40px;
+    font-size: 25px;
+}
+
+.Change-btn {
+    padding: 8px 15px;
+    border-radius: 8px;
+    
+    background-color:var(--color1) ;
+    
+    border: none;
+    width: 50%;
+    transition: 0.5s;
+    color:var(--color3);
+}
+
+.Change-btn:hover {
+    background-color: var(--color1);
+    color: #203b37;
+
+}
+
+.error {
+    color: rgb(109, 8, 8);
+}
+
+
+
+
+.eye {
+    position: absolute;
+    width: 50%;
+    background-color: transparent;
+    border: none;
+
+}
+
+.eye i {
+    position: relative;
+    left: 420px !important;
+    top: 18px;
+    cursor: pointer;
+}
+
+.bttn {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+
+}
+
+
+
+
+@media(max-width:700px) {
+    .pic {
+        display: none;
+    }
+
+    .error {
+        width: 50%;
+    }
+
+    .main {
+        min-height: 80vh;
+    }
+}

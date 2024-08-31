@@ -1,0 +1,148 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Rubik", sans-serif;
+}
+
+:root {
+    --color1: #f8f7e5;
+    --color2: #c18d52;
+    --color3: #081b1b;
+    --color4: #203b37;
+    --color5: #5a8f76;
+    --color6: #96cdb0;
+}
+
+.otp-field {
+    flex-direction: row;
+    column-gap: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.error {
+    color: rgb(109, 8, 8);
+}
+
+.row {
+    align-items: center;
+    justify-content: center;
+    margin-top: 1%;
+}
+
+.container-fluid {
+    justify-content: center !important;
+    align-items: center !important;
+    height: 100vh;
+    background-color: var(--color1);
+}
+
+.fa-solid {
+    font-size: 100px;
+    padding-bottom: 30px;
+}
+
+.card {
+    border-radius: 20px;
+}
+
+.card-body {
+    border-radius: 20px !important;
+    background-color: var(--color5);
+}
+
+.pp {
+    font-size: 20px !important;
+}
+
+.otp-field input {
+    height: 45px;
+    width: 50%;
+    border-radius: 6px;
+    outline: none;
+    font-size: 1.125rem;
+    text-align: center;
+    border: 1px solid #ddd;
+}
+
+.otp-field input:focus {
+    box-shadow: 0 1px 0 rgba(0, 0, 0, 0.1);
+}
+
+.otp-field input::-webkit-inner-spin-button,
+.otp-field input::-webkit-outer-spin-button {
+    display: none;
+}
+
+.btn {
+    height: 50px;
+    width: 30%;
+    background-color: var(--color1) !important;
+    color: black !important;
+    border: none;
+    opacity: 1 !important;
+    border-radius: 10px;
+}
+
+.resendd {
+    border: none;
+    outline: none;
+    background-color: transparent;
+    color: var(--color1) !important;
+    text-decoration: underline;
+}
+
+a {
+    color: var(--color1);
+    text-decoration: none;
+
+}
+
+a:hover {
+    color: var(--color3);
+}
+
+.resend {
+    padding-top: 5px;
+    font-size: 15px;
+    color: var(--color3) !important;
+    border: none;
+}
+
+.footer {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    color: black;
+    font-size: 12px;
+    text-align: right;
+    font-family: monospace;
+}
+
+.footer a {
+    color: black;
+    text-decoration: none;
+}
+
+/* Responsive Styles */
+
+@media (max-width: 700px) {
+    .btn {
+        width: 40%;
+    }
+
+    .error {
+        width: 60%;
+        position: absolute;
+        top: 1.5%;
+        left: 20%;
+        margin: auto;
+        /* padding-bottom: 50px; */
+    }
+
+    .container {
+        margin-top: 50px;
+    }
+}

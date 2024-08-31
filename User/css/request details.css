@@ -1,0 +1,125 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --color1: #edecdd;
+    --color2: #c18d52;
+    --color3: #081b1b;
+    --color4: #203b37;
+    --color5: #5a8f76;
+    --color6: #96cdb0;
+}
+
+body {
+    background-color: var(--color1);
+    font-family: "Rubik", sans-serif;
+}
+
+.main{
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.request-card{
+    width: 70%;
+    padding: 30px;
+    border: none;
+    border-radius: 20px;
+    background-color: white;
+    box-shadow: 22px 10px 15px -3px rgba(0,0,0,0.1);
+}
+h1{
+    font-family: "Lancelot", serif;
+    font-size: 50px;
+}
+.request-card .heading{
+    text-align: center;
+    padding: 5px;
+    margin-bottom: 5px;
+    color: var(--color3);
+}
+
+.request-card .name{
+    width: 100%;
+    display: flex;
+    padding: 10px;
+    color: #c18d52;
+}
+
+.request-card .name p{
+    padding-top: 2px;
+    padding-inline: 10px;
+    font-size: 20px;
+    color: #081b1b;
+}
+
+.request-card .buttons{
+    width: 100%;
+}
+
+.buttons form{
+    display: flex;
+    justify-content: flex-end;
+    gap: 30px;
+    padding-inline: 20px;
+    padding: 10px;
+}
+
+.buttons form button{
+    border: none;
+    border-radius: 10px;
+    width: 8%;
+}
+
+.buttons form button i{
+    font-size: 25px;
+}
+
+
+.buttons form .btn1{
+    padding: 5px;
+    background-color: rgba(0, 128, 0, 0.682);
+}
+
+.buttons form .btn1:hover{
+  
+    background-color: rgba(0, 128, 0, 0.564);
+}
+.buttons form .btn2{
+    padding: 5px;
+    background-color: rgba(255, 0, 0, 0.822);
+}
+.buttons form .btn2:hover{
+  
+    background-color: rgba(255, 0, 0, 0.696);
+}
+
+@media(max-width:700px){
+
+    .main{
+        padding: 20px 0px;
+    }
+
+    .request-card{
+        width: 90%;
+        padding: 30px 10px;
+    }
+
+    .request-card .name{
+        flex-direction: column;
+    }
+
+    .buttons form{
+        justify-content: center;
+    }
+
+    .buttons form button{
+        width: 15%;
+    }
+}

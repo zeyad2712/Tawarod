@@ -1,0 +1,104 @@
+*{
+    margin: 0;
+    padding: 0;
+
+}
+:root{
+    --color1: #edecdd;
+    --color2: #c18d52;
+    --color3: #0e2f2f;
+    --color4: #203b37;
+    --color5: #5a8f76;
+    --color6: #96cdb0;
+}
+body{
+    background-color: var(--color1);
+    font-family: "Rubik", sans-serif;
+}
+.main{
+    width: 100%;
+  height: 400px;
+}
+.main{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.request {
+    background-color: var(--color4);
+    width: 100%;
+    padding:  55px;
+    border-radius: 8px;
+  
+}
+.option{
+    color: #0e2f2f;
+}
+
+.request .input1{
+    padding: 10px 0;
+    width: 100%;
+    /* padding-left: 10px; */
+    margin-bottom: 20px;
+    margin-top: 10px;
+    border: none;
+    border-bottom: 2px solid white;
+    background-color: transparent;
+    color: white;
+    outline: none;
+}
+.request form .input1::placeholder {
+
+    color: rgb(232, 227, 227);
+}
+.request form label{
+    font-size: 15px;
+    color: white;
+}
+.request h1{
+    margin-bottom: 40px ;
+    font-size: 45px;
+    color: white;
+    font-family: "Lancelot", serif;
+}
+.btn{
+    padding: 8px 15px;
+    border-radius: 8px;
+    background-color: var(--color1);
+    border:none;
+    width: 100%;
+}
+.btn:hover{
+   background-color: var(--color5);
+  
+}
+.error{
+  color: red;
+  margin-bottom: 20px;
+} 
+
+
+
+
+.icon{
+    position: absolute;
+    width: 50%;
+}
+
+.icon i{
+    position: relative;
+    left: 220px;
+    top: 18px;
+    cursor: pointer;
+}
+@media(max-width:700px){
+    .pic{
+        display: none;
+    }
+    .error{
+        width: 50%;
+    }
+    .main{
+        min-height: 80vh;
+    }
+}

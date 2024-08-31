@@ -1,0 +1,232 @@
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+
+}
+:root {
+    --color1: #f8f7e5;
+    --color2: #c18d52;
+    --color3: #081b1b;
+    --color4: #203b37;
+    --color5: #5a8f76;
+    --color6: #96cdb0;
+}
+body{
+    background-color: var(--color1) !important;
+}
+/* <!-- add comment bar --> */
+.file-inpt{
+    visibility: hidden;
+}
+
+.taskInput1{
+    width: 80%;
+    height: 50px;
+    position: absolute;
+    bottom: 20%;
+    right: 18%;
+}
+
+/* <!-- add commeent button --> */
+
+button {
+    background-color: var(--color4);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s ease;
+    position: absolute;
+    bottom: 20%;
+    right: 3%;
+}
+
+.add-comment button:hover {
+    background-color: var(--color5);
+}
+
+
+/* ----------------------post-------------------------- */
+
+
+/* Post Detail */
+
+.post-detail {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    padding-block: 40px;
+}
+
+/* Post Container */
+.post3 {
+    width: 60%;
+    border: none;
+    
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+    padding: 20px;
+    position: relative;
+}
+
+/* Profile Image */
+.post3 img {
+    width: 135px;
+    height: 135px;
+    border-radius: 50%;
+    padding: 20px;
+}
+.personal-info{
+    display: flex;
+}
+/* Post Title and Details */
+.post3 h2 {
+    margin-top: 50px;
+    font-size: 25px;
+    
+}
+
+.post3 h1 {
+    padding-top: 20px;
+    font-size: 25px;
+    font-weight: 700;
+}
+
+.post3 .time {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-top: 15px;
+    color: #c18d52;
+
+}
+
+.post3 .time h4 {
+    background-color: var(--color4);
+    color: white;
+    border-radius: 15px;
+    padding: 5px 10px;
+    font-size: 18px;
+}
+
+.post3 .time p {
+    font-weight: 700;
+    font-size: 18px;
+}
+
+/* Post Description */
+.post3 p {
+    padding: 20px;
+    font-size: 16px;
+}
+
+/* Skills Section */
+
+
+
+
+
+
+.tab-content {
+    margin-top: 20px;
+    overflow-y: scroll;
+    margin-bottom: 50px;
+}
+
+.tab-content h4 {
+    color: var(--color5);
+    font-size: 24px;
+    font-style: italic;
+}
+
+.comment-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+   
+}
+
+.comment-list li {
+    margin: 10px 0;
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+    
+}
+
+.delete-comment {
+    color: var(--color2);
+    text-decoration: none;
+    margin-left: 10px;
+    margin-left: 80%;
+}
+
+.delete-comment:hover {
+    text-decoration: underline;
+}
+
+.fa-solid {
+    margin-left: 75%;
+    
+}
+
+/* Comment Bar */
+.task-bar {
+    display: flex;
+    position: relative;
+    bottom: 0px;
+    /* margin-top: 20px; */
+}
+
+.task-bar .taskInput1 {
+    width: 70%;
+    height: 40px;
+    padding: 0 5px;
+    margin-right: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    left: 0;
+}
+
+.task-bar button {
+    background-color: var(--color4);
+    color: white;
+    border: none;
+    padding: 8px 5px;
+    border-radius: 5px;
+    font-size: 15px;
+    cursor: pointer;
+    transition: .3s ease;
+    margin-left: 20px;
+}
+
+.task-bar button:hover {
+    background-color: var(--color5);
+}
+.add-btn{
+    background-color: var(--color4);
+    color: white;
+    border: none;
+    padding: 8px 5px;
+    border-radius: 5px;
+    font-size: 15px;
+    cursor: pointer;
+    transition: .3s ease;
+    margin-left: 20px;
+    position: absolute;
+    right: 18%; 
+    bottom: 19%;
+}
+
+@media(max-width: 700px) {
+     .post3 h2 {
+        display: flex;
+        position: absolute;
+        left: 30%;
+        
+    }
+
+}

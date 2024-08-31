@@ -1,0 +1,240 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: "Rubik", sans-serif;
+
+}
+
+:root {
+    --color1: #f8f7e5;
+    --color2: #c18d52;
+    --color3: #081b1b;
+    --color4: #203b37;
+    --color5: #5a8f76;
+    --color6: #96cdb0;
+}
+
+body {
+    font-family: "Rubik", sans-serif;
+    background-color: var(--color1);
+    ;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 88vh;
+    width: 100%;
+    font-family: "Rubik", sans-serif;
+
+    /* background-color: rgba(0, 0, 0, 0.381); */
+}
+
+/* .container-new{
+    visibility: visible;
+} */
+
+.main {
+    width: 90%;
+    height: 90vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-left: 20px;
+    /* border: 2px solid rgba(255, 255, 255, 0.16); */
+    border-radius: 8px;
+    padding: 20px;
+    position: relative;
+}
+
+.alform {
+    width: 90%;
+    height: 70vh;
+}
+
+.main form {
+    width: 100%;
+    height: 100%;
+    margin-left: 10px;
+    background-color: var(--color4);
+    border: 2px solid rgba(255, 255, 255, 0.16);
+    border-radius: 8px;
+    padding: 20px;
+}
+
+.img {
+    width: 60%;
+    height: 40%;
+}
+
+.head {
+    text-align: center;
+    font-size: 30px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    color: #fff;
+    padding-top: 20px;
+    padding-bottom: 10px;
+}
+
+/* .exit{
+    color: var(--color1);
+    position: relative;
+    top: 0;
+    left: 93%;
+}
+.exit a {
+    color: var(--color1);
+} */
+.main input {
+    width: 100%;
+    height: 40px;
+    margin: 10px 0;
+    background: transparent;
+    border: none;
+    outline: none;
+    border-bottom: 2px solid white;
+    font-size: 16px;
+    color: #fff;
+    padding: 6px 6px 1px 1px;
+    margin-bottom: 15px;
+    margin-left: 3px;
+}
+
+input[type="text"]::placeholder {
+    color: #fff;
+    font-size: 16px;
+    /* Change font size */
+    opacity: 1;
+    /* Fully opaque placeholder */
+}
+
+textarea {
+    background: transparent;
+    margin-top: 10px;
+}
+
+textarea::placeholder {
+    color: #fff;
+    font-size: 16px;
+    /* Change font size */
+    opacity: 1;
+    /* Fully opaque placeholder */
+    padding-top: 5px;
+    padding-left: 5px;
+
+}
+
+textarea#desc {
+    background-color: transparent;
+    border-bottom: 2px solid white;
+}
+
+.fileinput {
+    border: none;
+    /* border-bottom: 2px solid #5b6749 ; */
+}
+
+
+.main label {
+    color: #fff;
+    font-size: 18px;
+    font-weight: 600;
+    font-family: "Rubik", sans-serif;
+    padding-top: 20px;
+}
+
+.main button {
+    width: 30%;
+    height: 40px;
+    background-color: var(--color1) ;
+    outline: none;
+    border: 1px solid #5b6749;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--color3);
+    transition: all 0.5s;
+    margin-top: 30px;
+    margin-bottom: 10px;
+}
+
+.main button:hover {
+    border: 1px solid #c2a98b;
+    background-color: #cfb595;
+}
+
+.main textarea {
+    /* background-color: white; */
+    border: none;
+    border-radius: 10px;
+}
+
+.zorar {
+    display: flex;
+    justify-content: end;
+    margin-right: 20px;
+}
+
+.fileinput {
+    display: none;
+}
+
+.filelabel {
+    /* border-bottom: #5b6749 1px solid; */
+    padding-top: 20px;
+}
+
+label.filelabel {
+    display: inline-block;
+    margin-top: 10px;
+}
+
+.error {
+    color: red;
+}
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .main {
+        width: 80%;
+        margin-left: 10px;
+    }
+
+    .main input {
+        width: 100%;
+        margin-left: 0;
+    }
+
+    .main button {
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .main {
+        width: 90%;
+        flex-direction: column;
+        margin-left: 0;
+        padding: 15px;
+    }
+
+    .main input,
+    .main textarea,
+    .main button {
+        width: 100%;
+        margin-left: 0;
+    }
+
+    .head {
+        font-size: 24px;
+    }
+
+    .main button {
+        height: 45px;
+    }
+}
