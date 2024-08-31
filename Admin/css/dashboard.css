@@ -1,0 +1,255 @@
+* {
+    margin: 0;
+    padding: 0;
+    /* box-sizing: border-box; */
+}
+
+:root {
+
+    --color1: #edecdd;
+    --color2: #c18d52;
+    --color3: #0e2f2f;
+    --color4: #203b37;
+    --color5: #5a8f76;
+    --color6: #96cdb0;
+}
+
+body {
+    width: 100%;
+    min-height: 100vh;
+    background-color: var(--color1);
+    font-family: "Rubik", sans-serif;
+    display: flex;
+}
+
+.sidebar {
+    width: 15%;
+    min-height: 100vh;
+    background-color: var(--color4);
+    padding: 15px;
+}
+
+.heading {
+    margin-top: 30px;
+    margin-bottom: 35%;
+    color: var(--color1);
+    font-weight: 400;
+}
+
+.list {
+    padding: 10px 0px;
+    /* background-color: aqua; */
+}
+
+.list ul {
+    list-style: none;
+    line-height: 65px;
+}
+
+.list ul li {
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--color1);
+}
+
+.list ul li a {
+    color: var(--color1);
+    text-decoration: none;
+}
+
+.list ul li a:hover {
+    text-decoration: underline;
+}
+
+.log {
+    position: fixed;
+    bottom: 25px;
+    left: 20px;
+}
+
+.log button {
+    padding: 8px 10px;
+    border: none;
+    border-radius: 30px;
+    background-color: var(--color1);
+    color: var(--color3);
+    font-weight: 500;
+}
+
+.main-content {
+    width: 85%;
+}
+
+.main-content .main-heading {
+    text-align: center;
+}
+
+.main-content .main-heading h1 {
+    color: var(--color3);
+}
+
+.dash-heading {
+    padding: 5px 30px;
+}
+
+
+.dash .card-holder {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    flex-direction: row;
+    width: 100%;
+    gap: 20px;
+    padding: 20px;
+}
+
+.card1 {
+    width: 47%;
+    height: 250px;
+    padding: 20px;
+    border: none;
+    border-radius: 20px;
+    background-color: #fff;
+}
+
+.main-content .main-heading1 {
+    padding: 5px 10px;
+}
+
+.main-content .main-heading1 h1 {
+    color: var(--color3);
+}
+
+.graph {
+    width: 100%;
+    padding-inline: 30px;
+    display: flex;
+}
+
+.graph img {
+    width: 63%;
+}
+
+.main-content1 {
+    width: 85%;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+.main-content1 .main-heading {
+    text-align: center;
+}
+
+.main-content1 .main-heading h1 {
+    color: var(--color3);
+}
+
+.table tbody tr {
+    height: 70px;
+}
+
+.table tbody tr th {
+    padding-left: 25px !important;
+}
+
+
+.main-content2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 85%;
+    min-height: 100vh;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+
+.form {
+    background-color: var(--color4);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    width: 100%;
+    border: none;
+    border-radius: 30px;
+}
+
+.form h1 {
+    color: var(--color1);
+    padding-block: 10px;
+}
+
+.form .input-span {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    outline: none;
+}
+
+.form .input-span p{
+    color: red;
+}
+
+.form input[type="email"],
+.form input[type="text"],
+.form input[type="password"] {
+    border-radius: 0px;
+    padding: 1rem 0.75rem;
+    width: 100%;
+    border: none;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    background-color: transparent;
+    border-bottom: var(--color1) solid 2px;
+    outline: none;
+}
+
+.form input::placeholder {
+    color: var(--color1);
+}
+
+
+
+.form .submit {
+    padding: 7px 10px;
+    width: 50%;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    border-radius: 3rem;
+    background-color: var(--color1);
+    color: var(--color3);
+    border: none;
+    cursor: pointer;
+    transition: all 300ms;
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+
+.form .submit:hover {
+    background-color: var(--color4);
+    color: var(--color1);
+}
+
+@media(max-width:700px) {
+    .form {
+        width: 80%;
+    }
+}
+
+.main-content3 {
+    width: 85%;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+.main-content3 .main-heading {
+    text-align: center;
+}
