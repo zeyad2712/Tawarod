@@ -72,6 +72,7 @@ body {
 .buttons button i {
     font-size: 15px;
     font-weight: 900;
+    color: var(--color1);
 }
 
 
