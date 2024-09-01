@@ -97,11 +97,7 @@ $_SESSION['freelancer']=$freelancerid;
         ?>
     </div>
 
-    <div class="chat-box" onclick="openChat()">
-        <h1>
-            <i class="fa-solid fa-comment"></i>
-        </h1>
-    </div>
+    
 
 
 
