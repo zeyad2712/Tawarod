@@ -30,7 +30,7 @@ $client_id=$_SESSION['client_id'];
 
 $select_post = "SELECT * FROM `posts` JOIN `project` ON `project`.`project_id` = `posts`.`project_id`
     JOIN `category` ON `posts`.`cat_id` = `category`.`cat_id`
-    JOIN `client` ON `client`.`client_id` = `project`.`client_id`LIMIT $start,$rows_per_page";
+    JOIN `client` ON `client`.`client_id` = `project`.`client_id` order by `posts`.`post_id`desc  LIMIT $start,$rows_per_page ";
 
 $run_post = mysqli_query($connect, $select_post);
 
@@ -81,9 +81,11 @@ if (isset($_GET['pagem_nr'])) {
     $select_filter = "SELECT * FROM `posts`  JOIN `project` ON `project`.`project_id` = `posts`.`project_id`
     JOIN `category` ON `posts`.`cat_id` = `category`.`cat_id`
     JOIN `client` ON `client`.`client_id` = `project`.`client_id`
+    
 
 
                       WHERE project.client_id = '$client_id'LIMIT $start,$rows_per_page ";
+                      
     $filtered_my_posts = mysqli_query($connect, $select_filter);
 }
                                        
@@ -282,9 +284,7 @@ if(isset($_GET['page_nr'])){
 
             <?php if($client_id == $data['client_id']) { ?> 
        
-    <a href="posts.php?delete=<?php echo $data ['post_id']?>" class="delete-btn" name="delete" data-post-id="post1"><i class="fa-solid fa-circle-xmark"></i></a>
-    <a href="editpost.php?post_id=<?php echo $data ['post_id']?>" class="editbtn"><i class="fa-solid fa-pen-to-square"></i></a>
- 
+   
     <?php } ?>
             </div>
         <div class="post-content">
