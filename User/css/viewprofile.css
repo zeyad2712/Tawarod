@@ -511,7 +511,7 @@ body.dark .sidebar li a:hover .text {
     border: 2px solid black;
     background-color: var(--color4);
     transition: 1s;
-    margin-left: 45px;
+    margin-left: 55px;
 }
 .add:hover{
     color: #203b37;
@@ -708,7 +708,6 @@ body.dark .sidebar li a:hover .text {
 }
 
 .rate {
-    float: left;
     height: 46px;
     padding: 0 10px;
 }
