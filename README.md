@@ -1,6 +1,10 @@
 # SQL INJECTION 
 - Add community Post <mark>DONE</mark>
 
+# error code
+-ma3mol bs 3amlo comment awl lma n5ls hafok el comment
+
+
 # Path
 - nav bar landing (remove home page anchor from the logo)<mark>DONE</mark>
 - Tawarod Logo in landing not working <mark>DONE</mark>
