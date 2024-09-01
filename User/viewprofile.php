@@ -416,7 +416,7 @@ if($nnum>0) { ?>
                     
                     
                   </div>
-                  <button class="add" type="submit" name="submit">Submit</button>
+                  <button class="add" type="submit" name="submit" id="submitbtn" onclick="submitt()">Submit</button>
                   </form>
             </div>
             <?php  }} ?>
@@ -613,6 +613,14 @@ function openChat() {
 function closeChat() {
     chatContainer.classList.add('d-none')
 }
+    </script>
+
+    <script>
+        var submit =document.getElementById("submitbtn");
+
+        function submitt(){
+            window.alert("Added Sucsessfully")
+        }
     </script>
 
 </body>
