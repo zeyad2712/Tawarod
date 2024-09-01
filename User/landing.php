@@ -390,13 +390,13 @@ $total_projects=$fetch['projects'];
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>
 
-    <script>
+   <script>
 
         document.addEventListener('DOMContentLoaded', () => {
             const toggleButton = document.getElementById('switch');
             const heading = document.getElementById('heading');
-            const about = document.getElementById('about');
-            const hire = document.getElementById('hire');
+            const about = document.getElementById('aboutt');
+            const btn = document.getElementById('btn');
             const section1 = document.getElementById('section1');
             const cards = document.querySelectorAll('.card'); // Select all cards
             const body = document.body;
@@ -405,6 +405,8 @@ $total_projects=$fetch['projects'];
             if (localStorage.getItem('dark-mode') === 'enabled') {
                 body.classList.add('dark-mode');
                 heading.classList.add('dark-mode-heading');
+                about.classList.add('dark-mode-heading');
+                btn.classList.add('dark-mode-btn');
                 cards.forEach(card => card.classList.add('dark-mode-card-section')); // Apply to all cards
                 toggleButton.checked = true; // Set the switch to checked if dark mode is enabled
             }
@@ -413,6 +415,8 @@ $total_projects=$fetch['projects'];
                 // Toggle dark mode
                 body.classList.toggle('dark-mode');
                 heading.classList.toggle('dark-mode-heading');
+                about.classList.toggle('dark-mode-heading');
+                btn.classList.toggle('dark-mode-btn');
                 cards.forEach(card => card.classList.toggle('dark-mode-card-section')); // Toggle all cards
 
                 // Save the user's preference in localStorage
