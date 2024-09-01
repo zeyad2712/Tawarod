@@ -45,7 +45,8 @@ $run=mysqli_query($connect, $select);
         foreach ($run as $data) { ?>
              <a href="./viewprofile.php?view_profile=<?php echo $data['freelancer_id'] ?>" class="card">
             <div class="img">
-                <img src="./images/360_F_243123463_zTooub557xEWABDLk0jJklDyLSGl2jrr.jpg" alt="logo">
+                            <img src="./images/<?php echo $data['freelancer_image'] ?>" alt="logo">
+
             </div>
             <div class="info">
                 <h2><?php echo $data['freelancer_name'] ?></h2>
