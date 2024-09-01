@@ -82,6 +82,14 @@ if(isset($_SESSION['client_id'])){
 
 
 
+     <div class="txt">
+            <h1>
+                Our Categories
+            </h1>
+        </div>
+
+
+
 
 
 
