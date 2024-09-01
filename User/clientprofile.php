@@ -244,8 +244,8 @@ $num_pending = mysqli_num_rows($runSelect2);
                                 <div class="big-btns">
                                     <div class="mini-btns">
                                         <a href="task-details.php?id=<?php echo $data['project_id']?>">View Details</a>
-                                        <a id="edit" href="edit_project.php?edit=<?php echo $data['project_id']?>">Edit <i class="fa-regular fa-pen-to-square" style="color: blue;"></i></a>
-                                        <a type="button" onclick="showPopup(<?php echo $data['project_id'] ?>)">Delete <i class="fa-solid fa-trash" style="color: #d81313;"></i></a>
+                                        <a id="edit" href="edit_project.php?edit=<?php echo $data['project_id']?>"> <i class="fa-regular fa-pen-to-square" style="color: blue;"></i></a>
+                                        <a type="button" onclick="showPopup(<?php echo $data['project_id'] ?>)"> <i class="fa-solid fa-trash" style="color: #d81313;"></i></a>
                                     </div>
                                 </div>
                             </div>
