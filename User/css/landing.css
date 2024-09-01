@@ -14,6 +14,13 @@
     --color6: #96cdb0;
 }
 
+:root{
+    --dark-color-background-color:#000;
+    --dark-color-font-color:#93b1a6;
+    --dark-color-buttons-color:#139a43;
+    --dark-color-cards-color:#183d3d;
+}
+
 html {
     scroll-behavior: smooth;
 }
