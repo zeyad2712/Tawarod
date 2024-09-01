@@ -35,7 +35,7 @@ include 'mail.php';
         <div class="container-fluid">
         <?php if(isset($_SESSION['client_id']) || isset($_SESSION['freelancer_id'])) { ?>
 
-            <a class="navbar-brand" href="./homee.php">Tawarod</a>
+            <a class="navbar-brand" href="./landing.php">Tawarod</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                 data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
                 aria-label="Toggle navigation">
@@ -45,7 +45,7 @@ include 'mail.php';
 
 
 
-<a class="navbar-brand" href="#">Tawarod</a>
+<a class="navbar-brand" href="./landing.php">Tawarod</a>
 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
     data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
     aria-label="Toggle navigation">
