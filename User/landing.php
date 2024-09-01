@@ -64,7 +64,7 @@ $total_projects=$fetch['projects'];
                 <h3>
                     Join Us Now-Connect with Top Experts and Watch Your Business Thrive. Don't Settle for Less!
                 </h3>
-                <button class="btn">
+                <button class="btn" id="btn">
                     <a href="signup.php">
                         Join Us
                     </a>
