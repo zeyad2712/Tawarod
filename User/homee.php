@@ -12,6 +12,11 @@ if(isset($_SESSION['client_id'])){
          WHERE `chat`.`client_id`=$client_id AND `seen`=0 AND `from_to`='fc' order by `chat_id`";
          $run_notee=mysqli_query($connect,$select_notee);
          $number_c=mysqli_num_rows($run_notee);
+         $select_note_c="SELECT `chat`.*, `freelancer`.*, count(`chat`.`chat_id`) as `number` FROM `chat` 
+    JOIN `freelancer` ON `freelancer`.`freelancer_id`=`chat`.`freelancer_id` 
+     WHERE `chat`.`client_id`=$client_id AND `seen`=0 AND `from_to`='fc' group by `chat`.`freelancer_id` order by `chat_id`" ;
+     $run_note_c=mysqli_query($connect,$select_note_c);
+
     }
     if(isset($_SESSION['freelancer_id'])){
         $freelancer_id=$_SESSION['freelancer_id'];
@@ -20,6 +25,10 @@ if(isset($_SESSION['client_id'])){
              WHERE `chat`.`freelancer_id`=$freelancer_id AND `seen`=0 AND `from_to`='cf' order by `chat_id`";
          $run_note=mysqli_query($connect,$select_note);
          $number_f=mysqli_num_rows($run_note);
+         $select_note_f="SELECT `chat`.* , `client`.* , count(`chat`.`chat_id`) as `number` FROM `chat`
+         JOIN `client` ON `client`.`client_id`=`chat`.`client_id`
+          WHERE `chat`.`freelancer_id`=$freelancer_id AND `seen`=0 AND `from_to`='cf' group by `chat`.`client_id` order by `chat_id`";
+      $run_note_f=mysqli_query($connect,$select_note_f);
     
         }
 
@@ -70,22 +79,6 @@ if(isset($_SESSION['client_id'])){
                <a href="community.php"> OUR COMMUNITY</a>
             </div>
         </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -294,19 +287,19 @@ if(isset($_SESSION['client_id'])){
 
     <div class="not-list d-none" id="not-list">
         <?php if(!empty($_SESSION['freelancer_id'])) { 
-         foreach($run_note as $data) { ?>
+         foreach($run_note_f as $data) { ?>
         <div class="user">
         <a href="speak2.php?view=<?php echo $data['client_id'];?>">
-            <img src="./images/<?php echo $data['client_image'];?>" alt=""> <?php echo $data['client_name'];?>
+            <img src="./images/<?php echo $data['client_image'];?>" alt=""> <?php echo $data['number']."msg from ".$data['client_name'];?>
             
         </a>
         </div>
         <?php } } elseif(!empty($_SESSION['client_id'])) {
-            foreach($run_notee as $data){ 
+            foreach($run_note_c as $data){ 
             ?>
         <div class="user">
         <a href="speak.php?view_profile=<?php echo $data['freelancer_id'];?>">
-            <img src="./images/<?php echo $data['freelancer_image'];?>" alt=""> <?php echo $data['freelancer_name'];?>
+            <img src="./images/<?php echo $data['freelancer_image'];?>" alt=""> <?php echo $data['number']."msg from".$data['freelancer_name'];?>
             
         </a>
         </div>
