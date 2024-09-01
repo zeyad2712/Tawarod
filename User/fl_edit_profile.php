@@ -1,21 +1,13 @@
 <?php
 include ('nav.php');
 
-// Uncomment and use session if needed
-// session_start(); 
+
 $error="";
 $freelancer_id=$_SESSION['freelancer_id'];
- //  replace with session value if needed
-// $FLid = $_SESSION['freelancer_id']; // Use session if needed
-// $FLid = $freelancer_id; 
+
 $FL_name = "";
 $about = "";
-// $cat_id=$_POST['sub_b'];
 $Price_Hour = "";
-
-// $select_cat="SELECT * FROM `category` ";
-// $run_cat=mysqli_query($connect , $select_cat);
-
 
 $rrrrr="SELECT * FROM `rank`";
 $rankk=mysqli_query($connect,$rrrrr);
@@ -37,7 +29,9 @@ $FLid=$_GET['edit'];
     $run_select = mysqli_query($connect, $select);
     if ($run_select) {
         $fetch = mysqli_fetch_assoc($run_select);
+
         $freelancer_name = $fetch['freelancer_name'];
+
         $freelancer_about = $fetch['about'];
         $freelancer_price_Hours= $fetch['price/hour'];
         $old_img=$fetch['freelancer_image'];
@@ -50,10 +44,15 @@ $FLid=$_GET['edit'];
     
     if (isset($_POST['submit'])) {
         $freelancer_name = $_POST['freelancer_name'];
-        $freelancer_about = $_POST['about'];
+        
+        // $freelancer_about = $_POST['about'];
+        $freelancer_about=mysqli_real_escape_string($connect,$_POST['about']);
+
         $freelancer_price_Hours = $_POST['Price_hour'];
         $image = $_FILES['image']['name'];
-        $job=$_POST['job'];
+        $job=mysqli_real_escape_string($connect,$_POST['job']);
+
+        // $job=$_POST['job'];
         if(!isset($_POST['rank'])){
         $rank=$fetch['rank_id'];
 
