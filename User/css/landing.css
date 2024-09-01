@@ -61,6 +61,7 @@ nav {
     font-size: 60px;
     font-weight: 700;
     color: var(--color3);
+    font-family: "Lancelot", serif;
 }
 
 .left h3 {
@@ -99,10 +100,15 @@ nav {
 
 .title h1 {
     text-align: center;
+    font-family: "Lancelot", serif;
+    font-size: 55px;
+    color: #0e2f2f;
+    font-weight: bold;
 }
 
 .title p {
     text-align: center;
+    font-size: 20px;
 }
 
 
@@ -119,7 +125,7 @@ nav {
 
 .section1 h1 {
     padding: 20px;
-    text-align: center;
+   
     width: 100%;
     justify-content: flex-start;
 }
@@ -159,7 +165,7 @@ nav {
 
 .video-section {
     display: flex;
-    gap: 20px;
+    gap: 30px;
     margin-top: 5%;
     animation: appear linear;
     animation-timeline: view();
@@ -176,7 +182,10 @@ nav {
     display: flex;
     align-items: center;
 }
-
+.desc p{
+    font-size: 25px;
+    text-align: center;
+}
 footer {
     width: 100%;
     background-color: var(--color4);
@@ -193,7 +202,7 @@ footer {
     border: none;
 }
 
-.footer-sections h2 {
+.footer-sections h2{
     font-weight: 400;
     color: #fff;
     margin-left: 30px;
@@ -218,7 +227,7 @@ footer {
     padding: 20px;
 }
 
-.footer-sections1 h2 {
+.footer-sections1 h4 {
     color: #fff;
 }
 
@@ -231,10 +240,15 @@ footer {
 }
 
 .footer-sections1 button {
-    margin-inline: 10px;
+    margin-inline: 8px;
     border-radius: 50%;
     border: none;
+    background-color: transparent;
 }
+.footer-sections1 button a i {
+    color: white !important;
+}
+
 
 .footer-sections1 button:hover {
     opacity: 0.8;
@@ -278,7 +292,24 @@ hr {
 .list ul li a:hover {
     text-decoration: underline;
 }
-
+.fa-facebook:hover{
+    color: blue !important;
+}
+.fa-instagram:hover{
+   color: rgb(248, 50, 83) !important;
+}
+.fa-youtube:hover{
+    color: red !important;
+}
+.fa-linkedin:hover{
+    color: darkblue !important;
+}
+.fa-x-twitter:hover{
+    color: #000 !important;
+}
+.footer-sections1 h2{
+    color: white;
+}
 @keyframes appear{
     from{
         opacity: 0;
@@ -383,4 +414,20 @@ hr {
     .list ul {
         display: block;
     }
+}
+
+
+body.dark-mode {
+    background-color: var(--dark-color-background-color) !important;
+    color: var(--color1) !important;
+
+}
+
+.dark-mode-card-section{
+    background-color: var(--dark-color-cards-color) !important;
+    color: var(--color1);
+}
+
+.dark-mode-heading{
+    color: var(--dark-color-font-color) !important;
 }
