@@ -461,6 +461,32 @@ body.dark .sidebar li a:hover .text {
     margin: 10px;
 }
 
+.main .main-sec .information a{
+    color: var(--color4);
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.main .main-sec .information a i{
+    margin-left: 5px;
+}
+
+
+.pinfo{
+    color: var(--color5);
+}
+
+.chat-box{
+    position: fixed;
+    bottom: 15px;
+    right: 25px;
+}
+
+.chat-box h1 a{
+    color: var(--color4);
+}
+
+
 
 
 
