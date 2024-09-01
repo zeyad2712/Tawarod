@@ -31,6 +31,11 @@ $run=mysqli_query($connect, $select);
 
 </head>
 <body>
+    <div class="heading">
+        <h1>
+            Designer Freelancers
+        </h1>
+    </div>
 
 <div class="main">
         <?php 
