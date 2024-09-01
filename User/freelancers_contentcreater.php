@@ -33,6 +33,13 @@ $run=mysqli_query($connect, $select);
 </head>
 <body>
 
+    
+<div class="heading">
+        <h1>
+            Content Creation Freelancers
+        </h1>
+    </div>
+
 <div class="main">
         <?php 
         foreach ($run as $data) { ?>
