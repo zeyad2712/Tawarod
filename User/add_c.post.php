@@ -12,13 +12,14 @@ if(isset($_SESSION['client_id'] )){
 
       
       
-        $cpost_desc=$_POST['desc'];
+        $cpost_desc=mysqli_escape_string($connect,$_POST['desc']);
 
 
         
-$cpost_img=$_POST['img'];
+$cpost_img=$_FILES['img']['name'];
         $insert="INSERT INTO `c.posts` VALUES (NULL, '$cpost_desc','$client_id',NULL,'$cpost_img')";
         $run_insert=mysqli_query($connect,$insert);
+        move_uploaded_file($_FILES['img']['tmp_name'], "./images/".$cpost_img);
         header("location:community.php");   
     
     }
@@ -27,10 +28,11 @@ $cpost_img=$_POST['img'];
         if(isset($_POST['submit'])){
             $freelancer_id=$_SESSION['freelancer_id'];
             echo "radwan";
-            $cpost_desc=$_POST['desc'];
-    $cpost_img=$_POST['img'];
+            $cpost_desc=mysqli_escape_string($connect,$_POST['desc']);
+            $cpost_img=$_FILES['img']['name'];
             $insert="INSERT INTO `c.posts` VALUES (NULL, '$cpost_desc',NULL,'$freelancer_id','$cpost_img')";
             $run_insert=mysqli_query($connect,$insert);
+        move_uploaded_file($_FILES['img']['tmp_name'], "./images/".$cpost_img);
             header("location:community.php");   
         }    
         }
@@ -91,7 +93,7 @@ $cpost_img=$_POST['img'];
         <article class="post">
            
             <div class="post-content">
-    <form method="POST" name="category">
+    <form method="POST" name="category" enctype="multipart/form-data">
                
                <textarea name="desc" id="" placeholder="What's In Your Mind? " required></textarea>
                 <label for="p-img">Uplead Image <i class="fa-solid fa-arrow-up-from-bracket" style="color: #1a1a1a;"></i></label>
