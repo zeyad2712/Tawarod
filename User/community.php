@@ -315,18 +315,18 @@ $ndislike=mysqli_num_rows($run_dislike); ?>
      $run_likee=mysqli_query($connect,$select_likee);
      $numberl=mysqli_num_rows($run_likee);
      if($numberl >0){ ?>
-    <a href="community.php?cpost_id=<?php echo $data ['c.post_id']?> "class="read-more btn"  class="read-more btn" onclick="toggleLike(this)"><i class="fa-solid fa-thumbs-up" style="color: #0c0d0d;"></i>sl</a><?php echo $nlike ?>
+    <a href="community.php?cpost_id=<?php echo $data ['c.post_id']?> "class="read-more btn"  class="read-more btn" onclick="toggleLike(this)"><i class="fa-solid fa-thumbs-up" style="color: #0c0d0d;"></i></a><?php echo $nlike ?>
     <?php }else { ?>
-        <a href="community.php?cpost_id=<?php echo $data ['c.post_id']?> "class="read-more btn"  class="read-more btn" onclick="toggleLike(this)"><i class="fa-regular fa-thumbs-up" style="color: #0c0d0d;"></i>rl</a><?php echo $nlike ?>
+        <a href="community.php?cpost_id=<?php echo $data ['c.post_id']?> "class="read-more btn"  class="read-more btn" onclick="toggleLike(this)"><i class="fa-regular fa-thumbs-up" style="color: #0c0d0d;"></i></a><?php echo $nlike ?>
 <?php } ?>
 <?php         $select_dislikee="SELECT * FROM `react` WHERE `client_id`=$client_id AND `c.post_id`=$cpost_id AND `action`=0";
         $run_dislikee=mysqli_query($connect,$select_dislikee);
         $numberd=mysqli_num_rows($run_dislikee);
         if($numberd >0){ ?>
-            <a href="community.php?cpostX_id=<?php echo $data ['c.post_id']?>" class="read-more btn" onclick="toggleDislike(this)"><i class="fa-solid fa-thumbs-down" style="color: #000000;"></i>sd</a><?php echo $ndislike ?>
+            <a href="community.php?cpostX_id=<?php echo $data ['c.post_id']?>" class="read-more btn" onclick="toggleDislike(this)"><i class="fa-solid fa-thumbs-down" style="color: #000000;"></i></a><?php echo $ndislike ?>
             <?php }else { ?>
             
-            <a href="community.php?cpostX_id=<?php echo $data ['c.post_id']?>" class="read-more btn" onclick="toggleDislike(this)"><i class="fa-regular fa-thumbs-down" style="color: #000000;"></i>rd</a><?php echo $ndislike ?>
+            <a href="community.php?cpostX_id=<?php echo $data ['c.post_id']?>" class="read-more btn" onclick="toggleDislike(this)"><i class="fa-regular fa-thumbs-down" style="color: #000000;"></i></a><?php echo $ndislike ?>
             <?php } }else{ ?>
               
 
