@@ -134,11 +134,12 @@ $fectch_comment=mysqli_fetch_assoc($RunSelect);
             <div class="projects">
                 <div id="Project1" class="tab-content">
                     <h4>Comments</h4>
-                    <?php  foreach ($RunSelect as $key) {?>
+                    
                     <ul class="comment-list">
+                        <?php  foreach ($RunSelect as $key) {?>
                         <li>
       
-      <span><a href="viewprofile.php?view_profile=<?php echo $key ['freelancer_id']?>"><?php echo $key ['freelancer_name'] ?></a></span>: <span><?php  echo $key ['text'] ?> </span> <br> 
+      <span><a href="viewprofile.php?view_profile=<?php echo $key ['freelancer_id']?>"><?php echo $key ['freelancer_name'] ?></a></span>: <span class="comment-text"><?php  echo $key ['text'] ?> </span> <br> 
 
       <?php $fr= $key ['freelancer_id'];
        if(!empty($key['files'])){?>
@@ -151,13 +152,15 @@ $fectch_comment=mysqli_fetch_assoc($RunSelect);
       if ($free){
         if($fr == $freelancer_id){
             ?>
-<a class="delete-comment" href="post details.php?project_id=<?php echo $project_id ?>&&post_id=<?php echo $post_id ?>&&delete=<?php echo  $key['comment_id']?>">Delete</a><br>
-    
+            <div class="d-comm">
+        <a class="delete-comment" href="post details.php?project_id=<?php echo $project_id ?>&&post_id=<?php echo $post_id ?>&&delete=<?php echo  $key['comment_id']?>">Delete</a><br>
+        </div>
 
 
       </li>
+                        <?php } }}?>
                     </ul>
-                    <?php } }}?>
+                    
      
                 </div>
             </div>
