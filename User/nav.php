@@ -33,12 +33,27 @@ include 'mail.php';
 <body>
 <nav class="navbar navbar-expand-lg">
         <div class="container-fluid">
+        <?php if(isset($_SESSION['client_id']) || isset($_SESSION['freelancer_id'])) { ?>
+
             <a class="navbar-brand" href="./homee.php">Tawarod</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                 data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
                 aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
+            <?php }else{  ?>  
+
+
+
+<a class="navbar-brand" href="#">Tawarod</a>
+<button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+    aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+</button>
+
+
+          <?php  } ?>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav mx-auto mb-2 mb-lg-0 mx-5">
                     <?php if(isset($_SESSION['client_id']) || isset($_SESSION['freelancer_id'])) { ?>
