@@ -18,5 +18,6 @@ if(isset($_POST['logout']))
     session_destroy();
     header("location:login.php");
 }
+    // error_reporting(0);
 
 ?>
