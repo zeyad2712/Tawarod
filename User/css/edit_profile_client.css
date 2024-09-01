@@ -119,7 +119,7 @@ html{
 
 }
 .text-right {
-    margin-top: 50px;
+    margin-top: 25px;
     display: flex;
     justify-content: flex-end;
     /* background-color: var(--color6); */
