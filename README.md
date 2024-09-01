@@ -11,4 +11,5 @@
 - Pagination shaklaha bayez
 - ERROR MESSAGES KTEER
 - side nav (freelancer profile) el icon msh shgala w el css msh mazbot
-- side nav (client profile)lma byb2a fe aktr mn req el css da5el fe ba3do 
+- side nav (client profile)lma byb2a fe aktr mn req el css da5el fe ba3do
+- icon report in view freelancer profile
