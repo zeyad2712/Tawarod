@@ -121,13 +121,9 @@ $total_projects=$fetch['projects'];
 
         <!-- forth section -->
 
-        <div class="section1">
-
-
-
+       <div class="section1" id="section1">
             <div class="card-holder">
-
-                <div class="card1">
+                <div class="card1 card">
                     <div class="icon">
                         <h1>
                             <i class="fa-solid fa-list-check"></i>
@@ -135,12 +131,12 @@ $total_projects=$fetch['projects'];
                     </div>
                     <div class="stilte">
                         <h4>
-                        <?php  echo $total_projects ?>
+                            <?php echo $total_projects ?>
                         </h4>
                         <p>Projects</p>
                     </div>
                 </div>
-                <div class="card1">
+                <div class="card1 card">
                     <div class="icon">
                         <h1>
                             <i class="fa-solid fa-scroll"></i>
@@ -148,12 +144,12 @@ $total_projects=$fetch['projects'];
                     </div>
                     <div class="stilte">
                         <h4>
-                        <?php  echo $total_posts ?>
+                            <?php echo $total_posts ?>
                         </h4>
                         <p>No. Of Posts</p>
                     </div>
                 </div>
-                <div class="card1">
+                <div class="card1 card">
                     <div class="icon">
                         <h1>
                             <i class="fa-solid fa-user"></i>
@@ -161,12 +157,12 @@ $total_projects=$fetch['projects'];
                     </div>
                     <div class="stilte">
                         <h4>
-<?php  echo $total_freelancers ?>
-                    </h4>
+                            <?php echo $total_freelancers ?>
+                        </h4>
                         <p>No. Of Freelancers</p>
                     </div>
                 </div>
-                <div class="card1">
+                <div class="card1 card">
                     <div class="icon">
                         <h1>
                             <i class="fa-solid fa-people-group"></i>
@@ -174,17 +170,13 @@ $total_projects=$fetch['projects'];
                     </div>
                     <div class="stilte">
                         <h4>
-                        <?php  echo $total_client ?>
-
+                            <?php echo $total_client ?>
                         </h4>
                         <p>No. Of Clients</p>
                     </div>
                 </div>
             </div>
-
-
         </div>
-
 
         <!-- fifth section -->
 
@@ -398,8 +390,42 @@ $total_projects=$fetch['projects'];
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>
 
-    <!-- link js file -->
-    <script src="./js/landing.js"></script>
+    <script>
+
+        document.addEventListener('DOMContentLoaded', () => {
+            const toggleButton = document.getElementById('switch');
+            const heading = document.getElementById('heading');
+            const about = document.getElementById('about');
+            const hire = document.getElementById('hire');
+            const section1 = document.getElementById('section1');
+            const cards = document.querySelectorAll('.card'); // Select all cards
+            const body = document.body;
+
+            // Check if dark mode is enabled in localStorage
+            if (localStorage.getItem('dark-mode') === 'enabled') {
+                body.classList.add('dark-mode');
+                heading.classList.add('dark-mode-heading');
+                cards.forEach(card => card.classList.add('dark-mode-card-section')); // Apply to all cards
+                toggleButton.checked = true; // Set the switch to checked if dark mode is enabled
+            }
+
+            toggleButton.addEventListener('click', () => {
+                // Toggle dark mode
+                body.classList.toggle('dark-mode');
+                heading.classList.toggle('dark-mode-heading');
+                cards.forEach(card => card.classList.toggle('dark-mode-card-section')); // Toggle all cards
+
+                // Save the user's preference in localStorage
+                if (body.classList.contains('dark-mode')) {
+                    localStorage.setItem('dark-mode', 'enabled');
+                } else {
+                    localStorage.removeItem('dark-mode');
+                }
+            });
+        });
+
+
+    </script>
 </body>
 
 </html>
