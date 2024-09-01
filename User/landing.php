@@ -71,7 +71,7 @@ $total_projects=$fetch['projects'];
                 </button>
             </div>
             <div class="right">
-                <img src="./images/logo (2).png" alt="img">
+                <img src="./images/logo (3).png" alt="img">
             </div>
         </div>
 
