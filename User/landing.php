@@ -121,7 +121,7 @@ $total_projects=$fetch['projects'];
 
         <!-- forth section -->
 
-        <div class="section2">
+        <div class="section1">
 
 
 
