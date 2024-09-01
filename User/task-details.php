@@ -186,7 +186,8 @@ if(isset($_POST['done'])){
     <main class="content">
         <header class="header">
             <h1><?php echo $project_name ?></h1>
-            <?php if($number_member==0 || $type_id==1) { ?>
+            
+            <?php if(isset($_SESSION['client_id']) && ($number_member==0  || $type_id==1)) { ?>
             <a href="./all-freelancer.php" class="request-btn">Request</a>
         <?php } ?>
         </header>
