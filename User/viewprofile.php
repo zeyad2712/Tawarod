@@ -506,7 +506,7 @@ if($nnum>0) { ?>
                  if(isset($_SESSION['client_id'])){
 
                 if($client_id == $comment['client_id']){ ?>
-                <a class="delete-comment" href="viewprofile.php?view_profile=<?php echo $freelancer_id?>&&delete=<?php echo $comment['review_id']; ?>">Delete</a>
+                <a class="delete-comment" href="viewprofile.php?view_profile=<?php echo $freelancerid?>&&delete=<?php echo $comment['review_id']; ?>">Delete</a>
                 <?php } ?>
             </li>
                 <!-- <a href="request_form.php?freelancer=<?php// echo $freelancer_id ?>">request</a> -->
