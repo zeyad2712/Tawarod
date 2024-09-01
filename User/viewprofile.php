@@ -433,18 +433,18 @@ if($nnum>0) { ?>
                 <a href="request_form.php?freelancer=<?php echo $freelancerid ?>" class="add"> Hire me <span> <i class="fa-solid fa-plus fa-bounce"></i></span></a>
                 <?php } ?>
 
-                <p>Full Name : <?php echo $name; ?> </p>
-                <p>Email :<?php echo $email; ?> </p>
+                <p class="pinfo">Full Name : <?php echo $name; ?> </p>
+                <p class="pinfo">Email :<?php echo $email; ?> </p>
+                <p class="pinfo">Rank: <?php echo $rank; ?></p> <hr>
                 <p>Portal :<?php if(isset($price)){ echo $price;} ?> $/H </p>
                 <p>FreeLancer : <?php if(isset($price_per_hour)){ echo $price_per_hour;} ?>$/H </p>
                 <p>Hours Availble: <?php echo $hours; ?>/H
-                <p>Rank: <?php echo $rank; ?></p>
                 <p>views: <?php echo $views; ?></p>
             
                 
                 </p>
 
-                <a href="popup_report.php?view_profile=<?php echo $freelancerid ?>">report</a>
+                <a href="popup_report.php?view_profile=<?php echo $freelancerid ?>">report<i class="fa-solid fa-flag" style="color: #ff0000;"></i></a>
                 <!-- ------------------------------savebtn--------------------------------- -->
                 <?php if(isset($_SESSION['client_id'])){ ?>
                 <div class="save" >
