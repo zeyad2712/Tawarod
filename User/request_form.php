@@ -1,15 +1,6 @@
 <?php
 include 'request_email.php';
 $error="";
-// if (!isset($_SESSION['project_id'])) {
-//     $_SESSION['project_id'] = 4; 
-// }
-// if (!isset($_SESSION['client_id'])) {
-//     $_SESSION['client_id'] =8; 
-// }
-// if (!isset($_SESSION['category_id'])){
-//     $_SESSION['category_id'] = 4;
-// }
 $client_id = $_SESSION['client_id'];
 if(isset($_GET['freelancer']))
 {
