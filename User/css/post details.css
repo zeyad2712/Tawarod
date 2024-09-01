@@ -1,10 +1,10 @@
-
 * {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
 
 }
+
 :root {
     --color1: #f8f7e5;
     --color2: #c18d52;
@@ -13,15 +13,24 @@
     --color5: #5a8f76;
     --color6: #96cdb0;
 }
-body{
+
+:root {
+    --dark-color-background-color: #000;
+    --dark-color-font-color: #93b1a6;
+    --dark-color-buttons-color: #07431b;
+    --dark-color-cards-color: #183d3d;
+}
+
+body {
     background-color: var(--color1) !important;
 }
+
 /* <!-- add comment bar --> */
-.file-inpt{
+.file-inpt {
     visibility: hidden;
 }
 
-.taskInput1{
+.taskInput1 {
     width: 80%;
     height: 50px;
     position: absolute;
@@ -56,7 +65,7 @@ button {
 
 .post-detail {
     width: 100%;
-    min-height: 100vh;
+
     display: flex;
     justify-content: center;
     position: relative;
@@ -67,10 +76,11 @@ button {
 .post3 {
     width: 60%;
     border: none;
-    
+    background-color: white;
     box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
     padding: 20px;
     position: relative;
+    border-radius: 12px;
 }
 
 /* Profile Image */
@@ -80,14 +90,16 @@ button {
     border-radius: 50%;
     padding: 20px;
 }
-.personal-info{
+
+.personal-info {
     display: flex;
 }
+
 /* Post Title and Details */
 .post3 h2 {
     margin-top: 50px;
     font-size: 25px;
-    
+
 }
 
 .post3 h1 {
@@ -106,8 +118,7 @@ button {
 }
 
 .post3 .time h4 {
-    background-color: var(--color4);
-    color: white;
+    color: black;
     border-radius: 15px;
     padding: 5px 10px;
     font-size: 18px;
@@ -122,19 +133,26 @@ button {
 .post3 p {
     padding: 20px;
     font-size: 16px;
+
+
 }
 
 /* Skills Section */
 
 
 
-
-
+.comment-text {
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    word-break: break-word;
+    width: 100%;
+}
 
 .tab-content {
     margin-top: 20px;
     overflow-y: scroll;
     margin-bottom: 50px;
+
 }
 
 .tab-content h4 {
@@ -147,21 +165,49 @@ button {
     list-style: none;
     padding: 0;
     margin: 0;
-   
+    display: flex;
+    flex-direction: column;
+
+
 }
 
 .comment-list li {
     margin: 10px 0;
     padding: 10px;
     border-bottom: 1px solid #ddd;
-    
+
+}
+
+.comment-list-li {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    gap: 20px;
+}
+
+.comment-list-li a {
+    text-decoration: none;
+    color: var(--color3);
+    font-weight: bold;
+    padding: 20px;
+
+}
+
+.comment-list-li a:hover {
+    color: var(--color5);
+}
+
+.d-comm {
+
+    display: flex;
+    justify-content: flex-end;
 }
 
 .delete-comment {
     color: var(--color2);
     text-decoration: none;
     margin-left: 10px;
-    margin-left: 80%;
+
 }
 
 .delete-comment:hover {
@@ -170,7 +216,7 @@ button {
 
 .fa-solid {
     margin-left: 75%;
-    
+
 }
 
 /* Comment Bar */
@@ -206,7 +252,8 @@ button {
 .task-bar button:hover {
     background-color: var(--color5);
 }
-.add-btn{
+
+.add-btn {
     background-color: var(--color4);
     color: white;
     border: none;
@@ -217,16 +264,52 @@ button {
     transition: .3s ease;
     margin-left: 20px;
     position: absolute;
-    right: 18%; 
+    right: 18%;
     bottom: 19%;
+    display: flex;
+}
+
+.add-btn i {
+    margin-left: 0;
+}
+
+.fl {
+    text-decoration: none;
+    color: #203b37;
+    font-weight: bold;
+}
+
+.add-btn:hover {
+    background-color: var(--color5);
 }
 
 @media(max-width: 700px) {
-     .post3 h2 {
+    .post3 h2 {
         display: flex;
         position: absolute;
         left: 30%;
-        
+
     }
 
+}
+
+
+body.dark-mode {
+    background-color: var(--dark-color-background-color) !important;
+    color: var(--color1) !important;
+
+}
+
+.dark-mode-card-section {
+    background-color: var(--dark-color-cards-color) !important;
+    color: var(--color1);
+}
+
+.dark-mode-btn {
+    background-color: var(--dark-color-buttons-color) !important;
+    color: var(--color1);
+}
+
+.dark-mode-heading {
+    color: var(--dark-color-font-color) !important;
 }
