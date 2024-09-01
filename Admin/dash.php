@@ -251,12 +251,14 @@ if(isset($_POST['submit'])){
                     <?php foreach($run_select as $data ) {?>
                     
                         <th scope="row"><?php echo $nom++?></th>
-                        <td>    <?php echo $data['client_name'] ?> </td>
-                        <td><?php echo $data['client_email'];?></td>
+
+                        <td><?php echo $data['client_name'];?> </td>
+
+                        <td><a href="mailto:<?php echo $data['client_email'];?>"><?php echo $data['client_email'];?></a></td>
                         <td><?php echo $data['report']; ?>  </td>   
         <td><?php echo $data['freelancer_name'];?>  </td>   
         <td><?php echo $data['N_id'];?>  </td>   
-        <td><?php echo $data['freelancer_email'];?>  </td>   
+        <td><a href="mailto:<?php echo $data['freelancer_email'];?>"> <?php echo $data['freelancer_email'];?></a></td>   
         
     </tr>
     <?php } ?>
