@@ -17,7 +17,7 @@
 :root{
     --dark-color-background-color:#000;
     --dark-color-font-color:#93b1a6;
-    --dark-color-buttons-color:#139a43;
+    --dark-color-buttons-color:#07431b;
     --dark-color-cards-color:#183d3d;
 }
 
@@ -432,6 +432,11 @@ body.dark-mode {
 
 .dark-mode-card-section{
     background-color: var(--dark-color-cards-color) !important;
+    color: var(--color1);
+}
+
+.dark-mode-btn{
+    background-color: var(--dark-color-buttons-color) !important;
     color: var(--color1);
 }
 
