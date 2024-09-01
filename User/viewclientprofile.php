@@ -215,11 +215,11 @@ $filtered_my_posts = mysqli_query($connect, $select_filter);
    
 
 
-    <div class="chat-box" onclick="openChat()">
+<!--     <div class="chat-box" onclick="openChat()">
         <h1>
             <a href="speak2.php?view=<?php echo $client_id?>"><i class="fa-solid fa-comment"></i></a>
         </h1>
-    </div>
+    </div> -->
 
 
 
