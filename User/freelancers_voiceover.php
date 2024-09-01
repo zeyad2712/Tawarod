@@ -32,6 +32,12 @@ $run_select=mysqli_query($connect, $select);
 </head>
 <body>
 
+    <div class="heading">
+        <h1>
+            Voice Over Freelancers
+        </h1>
+    </div>
+
 <div class="main">
         <?php 
         foreach ($run_select as $data) { ?>
