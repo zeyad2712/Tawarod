@@ -5,7 +5,7 @@ include "nav.php";
 if(isset($_GET['freelancers'])){
 $id=$_GET['freelancers'];
 $select = "SELECT * FROM `category`  JOIN `freelancer` 
-ON `category`.`cat_id` = `freelancer`.`cat_id` WHERE `freelancer`.`cat_id`= 9 AND `freelancer`.`hide`=0";
+ON `category`.`cat_id` = `freelancer`.`cat_id` WHERE `freelancer`.`cat_id`= 9 AND `freelancer`.`hide`=0 AND `freelancer`.`ban`=0";
 $run=mysqli_query($connect, $select);
 }
 
