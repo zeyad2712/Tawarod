@@ -117,7 +117,7 @@ $promocode=$hana['promocode'];
             // $rand=rand(10000,99999);
             $length = 10;    
 $rand = substr(str_shuffle('0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ'),1,$length);
-$update_promocode="UPDATE client SET promocode=$rand where client_id=$client_id";
+$update_promocode="UPDATE client SET promocode='$rand' where client_id=$client_id";
 $run_update_promocode=mysqli_query($connect,$update_promocode);
 
             $msg="Congratulations!! <br>
