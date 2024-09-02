@@ -100,7 +100,7 @@ $total_projects=$fetch['projects'];
             <div class="video">
 
                 <video width="100%" controls>
-                    <source src="./images/landing video/landing video.mp4" type="video/mp4">
+                    <source src="./images/landing video/landing video/landing video.mp4" type="video/mp4">
                 </video>
 
             </div>
