@@ -20,16 +20,28 @@ if(isset($_POST['login1'])){
         $fetch=mysqli_fetch_assoc($run_select);
         $hashed_password=$fetch['freelancer_password'];
             
-         if(password_verify($password,$hashed_password)){
+     
+    if(password_verify($password,$hashed_password)){
+        $ban=$fetch["ban"];
+        $days=$fetch['days'];
+        $time=$fetch['time'];
+        $old_time=strtotime("$time");
+        $old_time+=$days;
+        $current=strtotime("today");
+        if(($ban==0) || ($current > $old_time) ){
+
             $freelancer_id=$fetch['freelancer_id'];
            $_SESSION['freelancer_id']=$freelancer_id;       
     //change header!!!
            header("location:homee.php");
-        //    echo "data";
         }else{
-            $error_msgp="password incorrect";
-           
-    }
+            $error_msgp="your accouny has taken ban";  
+        }
+    //    echo "data";
+    }else{
+        $error_msgp="password incorrect";
+       
+}
     }else{
         $error_msge="incorrect email ";
         }
