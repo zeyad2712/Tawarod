@@ -253,3 +253,11 @@ body {
 .main-content3 .main-heading {
     text-align: center;
 }
+
+.btnban{
+    color: var(--color1);
+    background-color: var(--color4);
+    border: none;
+    border-radius: 20px;
+    padding: 10px;
+}
