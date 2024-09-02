@@ -1,7 +1,7 @@
 <?php
 // include("connection.php");
 include 'nav.php';
- $query ="SELECT * FROM `freelancer` WHERE `hide`=0 ORDER BY `average_rate` DESC LIMIT 5  ";
+ $query ="SELECT * FROM `freelancer` WHERE `hide`=0 AND `freelancer`.`ban`=0 ORDER BY `average_rate` DESC LIMIT 5  ";
 $result=mysqli_query($connect,$query);
 
 // note
