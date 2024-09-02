@@ -3,7 +3,7 @@
 include('nav.php');
 
 $start=0;
-$rows_per_page=2;
+$rows_per_page=8;
 $records="SELECT * FROM freelancer";
 $run_records=mysqli_query($connect,$records);
 $nr_of_rows=mysqli_num_rows($run_records);
