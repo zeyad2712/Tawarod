@@ -18,5 +18,7 @@ if(isset($_POST['logout']))
     session_destroy();
     header("location:login_admin.php");
 }
+error_reporting(0);
+
 
 ?>
