@@ -14,37 +14,37 @@ if(isset($_GET['page_nr'])){
    $start=$page * $rows_per_page;
 }
 
-$select = "SELECT * FROM `freelancer` WHERE `freelancer`.`hide`=0 LIMIT $start,$rows_per_page";
+$select = "SELECT * FROM `freelancer` WHERE `freelancer`.`hide`=0 AND `freelancer`.`ban`=0 LIMIT $start,$rows_per_page";
 $RunSelect = mysqli_query($connect, $select);
 
 
 if(isset($_POST['search_btn'])) {
     $text = $_POST['text'];
-    $select_search = "SELECT * FROM `freelancer` WHERE (`freelancer_name` LIKE  '%$text%') OR (`job_title` LIKE  '%$text%') OR (`about` LIKE  '%$text%') AND (`freelancer`.`hide`=0)";
+    $select_search = "SELECT * FROM `freelancer` WHERE (`freelancer_name` LIKE  '%$text%') OR (`job_title` LIKE  '%$text%') OR (`about` LIKE  '%$text%') AND (`freelancer`.`hide`=0) AND (`freelancer`.`ban`=0)";
     $RunSelect = mysqli_query($connect, $select_search);  
 }
 if(isset($_POST['Developer'])) {
-$select_dev="SELECT * FROM `freelancer`WHERE cat_id=4 AND `freelancer`.`hide`=0";
+$select_dev="SELECT * FROM `freelancer`WHERE cat_id=4 AND `freelancer`.`hide`=0 AND `freelancer`.`ban`=0";
 $run_dev=mysqli_query($connect , $select_dev);
 }
 elseif(isset($_POST['data'])) {
-    $select_data="SELECT * FROM `freelancer` WHERE cat_id=5 AND `freelancer`.`hide`=0";
+    $select_data="SELECT * FROM `freelancer` WHERE cat_id=5 AND `freelancer`.`hide`=0 AND `freelancer`.`ban`=0";
     $run_data=mysqli_query($connect ,$select_data);
 }
 elseif(isset($_POST['voice'])) {
-    $select_voice="SELECT * FROM `freelancer`WHERE cat_id=6 AND `freelancer`.`hide`=0";
+    $select_voice="SELECT * FROM `freelancer`WHERE cat_id=6 AND `freelancer`.`hide`=0 AND `freelancer`.`ban`=0";
     $run_voice=mysqli_query($connect , $select_voice);
 }
 elseif(isset($_POST['Marketing'])) {
-    $select_mark="SELECT * FROM `freelancer`WHERE cat_id=7 AND `freelancer`.`hide`=0";
+    $select_mark="SELECT * FROM `freelancer`WHERE cat_id=7 AND `freelancer`.`hide`=0 AND `freelancer`.`ban`=0";
     $run_mark=mysqli_query($connect , $select_mark);
 }
 elseif(isset($_POST['Designer'])) {
-    $select_des="SELECT * FROM `freelancer`WHERE cat_id=8 AND `freelancer`.`hide`=0";
+    $select_des="SELECT * FROM `freelancer`WHERE cat_id=8 AND `freelancer`.`hide`=0 AND `freelancer`.`ban`=0";
     $run_des=mysqli_query($connect ,  $select_des);
 }
 elseif(isset($_POST['content'])) {
-    $select_con="SELECT * FROM `freelancer`WHERE cat_id=9 AND `freelancer`.`hide`=0";
+    $select_con="SELECT * FROM `freelancer`WHERE cat_id=9 AND `freelancer`.`hide`=0 AND `freelancer`.`ban`=0";
     $run_con=mysqli_query($connect , $select_con );
 }
 ?>
